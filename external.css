@@ -63,9 +63,17 @@ img{
     
 }
 
-#right #left{
-    display: inline-block;
-    size: 30cm;
-    float: left;
+.right{
+    float: right;
+    margin-right: 10%;
+    padding: 0%;
+    margin-top: 0%;
+
 }
+
+footer{
+margin-top: 30%;
+
+}
+
 
