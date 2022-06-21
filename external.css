@@ -41,12 +41,10 @@ body {
 
 .right-form{
     width: 50%;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-color: #fff;
-    padding: 3rem;
+    padding: 10rem;
 }
 
 .login-box, .right-form {
@@ -55,14 +53,6 @@ body {
     justify-content: space-between;
 }
 
-.login-box left {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding: 1rem;
-  }
 
 .h1 {
     margin-bottom: 10px;
@@ -163,14 +153,14 @@ body {
     border-radius: 10px;
 }
 
-.input-groug{
+.input-group {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 1rem 0;
 }
 
-.input-box{ 
+.input-box { 
     display: flex;
     flex-direction: column;
     margin-bottom: 1.1rem;
