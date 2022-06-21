@@ -5,34 +5,64 @@ margin: 0;
 padding: 0px;
 box-sizing: border-box; 
 font-family: 'Inter', 'sans-serif';
-
 }
 
-.body {
+body {
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
-    background-color: white;
-    color: black;
-    text-align: center;
-    margin: auto;
+    align-items: center;
 }
 
 .container {
-width: 80%;
-max-width: 400%;
-margin-top: 100px;
-margin-inline: auto;
-}
-
-#login-box {
-    opacity: 0.9;
     width: 80%;
     height: 80vh;
     display: flex;
-    box-shadow: 5px 5px 10px #rgba(0,0,0,0.212)
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212); 
 }
+
+.login-box {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+}
+
+.form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 3rem;
+}
+
+.right-form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 3rem;
+}
+
+.login-box, .right-form {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-box left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+  }
 
 .h1 {
     margin-bottom: 10px;
@@ -64,72 +94,53 @@ margin-inline: auto;
 
 }
 
-.img{
+.left {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fde3a7d7;
     padding: 0.1rem
+}
+
+.left img{
+    width: 40rem;
 }
 
 .form-image{
     width: 50%;
     display: flex;
     justify-content: center;
-    align-items: center
-    background-color: #fde3a7d7;
-    padding: 0.1rem
-}
-.form-image img {
-    width: 31rem;
-
-}
-
-.form{
-    width: 50%;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    background-color: #fff;
-    padding: 3rem;
+    background-color: white;
+    padding: 1rem;
 }
 
-.loginwith {
-font-size: 35px;
-
-
+.form-image img {
+    width: 40rem;
 }
 
-.right{
-    float: right;
-    margin-right: 10%;
-    padding: 5%;
-    font-size: 15px;
-    padding-top: 50px;
-    border-radius: 3px;
-}
+
+
 
 .form-header {
-margin-bottom: 3rem;
-display: flex;
-justify-content: space-between;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .login-button {
-display: flex;
-align-items: center;
-
+    display: flex;
+    align-items: center;
 }
 
 .login-button button {
     border: none;
     background-color: #6c63ff;
-    padding: 0.4em 1rem;
+    padding: 0.4rem 1rem;
     border-radius: 5px;
     cursor: pointer;
 }
+
 .login-button button:hover {
     background-color: #6b63fff1;
 
@@ -141,7 +152,7 @@ align-items: center;
     color: #fff;
 }
 
-.form-header h1::after{
+.form-header h1::after {
     content: '';
     display: block;
     width: 5rem;
@@ -157,20 +168,25 @@ align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 1rem 0;
-
 }
+
 .input-box{ 
     display: flex;
     flex-direction: column;
     margin-bottom: 1.1rem;
 }
 
+.loginwith {
+    font-size: 35px;
+}
+
 .input-box input{
     margin: 0.6rem 0;
     padding: 0.8rem 1.2rem;
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
 }
 
 .input-box input::hover {
@@ -193,7 +209,7 @@ align-items: center;
 
 .continue-button button{
     width: 100%;
-    margin-top 2.5rem;
+    margin-top: 2.5rem;
     border: none;
     background-color: #6c63ff;
     padding: 0.62rem;
@@ -213,28 +229,29 @@ align-items: center;
 }
 
 @media screen and (max-width: 1330px){
-    .form-image{
+    .form-image, .left{
         display: none;
     }
 
-    .container {
+    .container, .right-form{
         width: 50%;
     }
-    .form {
+    .form, .right-form{
         width: 100%;
     }
 }
 
 @media screen and (max-width: 1064px) {
-    .container{
+    .container, .right-form{
         width: 90%;
         height: auto;
     }
     .input-groug {
         flex-direction: column;
+        z-index: 5;
         overflow-y: scroll;
         flex-wrap: nowrap;
         max-height: 10rem;
         padding-right: 5rem;
 }
-
+}

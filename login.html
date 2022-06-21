@@ -10,44 +10,33 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<header>
-    Welcome
-</header>
-
 <body>
 
-    <div id="login-box">
-
-
+    <div class="login-box">
         <div class="left">
-            <img align=left src="./image/image4.png" alt="fit_image">
+            <img src="./image/image4.png" alt="fit_image">
         </div>
 
-        <div class="right">
+        <div class="right-form">
             <h1>Sign up</h1>
 
-            <input type="text" id="email" name="email" placeholder="E-mail" />
-            <input type="password" id="password" name="password" placeholder="Password" />
-
-            <input type="submit" id="login" name="login" value="Login" />
-
-            <h2>OR</h2>
+            <div class="input-group">
+                <input type="text" id="email" name="email" placeholder="E-mail" />
+                <input type="password" id="password" name="password" placeholder="Password" />
+                <input type="submit" id="login" name="login" value="Login" />
+            </div>
 
             <span class="loginwith">Sign in with Social network</span><br>
 
             <button class="social-signin facebook">FaceBook</button>
             <button class="social-signin github">GitHub</button>
             <button class="social-signin google">Google</button>
+
+            <p>OR</p>
+
+            <button class="register">Register Here</button>
         </div>
-
-
-
     </div>
-
-    <footer>
-
-        next level
-    </footer>
 
 </body>
 
@@ -139,8 +128,6 @@
             // User is signed in, see docs for a list of available properties
             // https://firebase.google.com/docs/reference/js/firebase.User
             const uid = user.uid;
-
-
 
             // ...
         } else {
