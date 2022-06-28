@@ -87,56 +87,33 @@
                     <label for="inputNumber">Mobile Phone</label>
                     <input type="phone" class="form-control" id="inputNumber" placeholder="Mobile Phone">
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="inputAddress">Address</label>
-                <input type="address" class="form-control" id="inputAddress" placeholder="Address">
-            </div>
-            <div class="form-group">
-                <label for="inputExtraInf">Extra Information</label>
-                <input type="text" class="form-control" id="inputExtraInf"
-                    placeholder="Extra information, hotel, house, etc.">
-            </div>
-            <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputCity">City</label>
-                    <input type="text" class="form-control" id="inputCity" placeholder="City">
+                    <label for="inputAddress">Address</label>
+                    <input type="address" class="form-control" id="inputAddress" placeholder="Address">
                 </div>
-                <div class="form-group col-md-4">
-                    <label for="inputState">State</label>
-                    <select id="inputState" class="form-control">
-                        <option selected>...</option>
-                        <option>Carlow</option>
-                        <option>Cavan</option>
-                        <option>Clare</option>
-                        <option>Cork</option>
-                        <option>Donegal</option>
-                        <option>Dublin</option>
-                        <option>Galway</option>
-                        <option>Kerry</option>
-                        <option>Kildare</option>
-                        <option>Kilkenny</option>
-                        <option>Laois</option>
-                        <option>Leitrim</option>
-                        <option>Limerick</option>
-                        <option>Longford</option>
-                        <option>Louth</option>
-                        <option>Mayo</option>
-                        <option>Meath</option>
-                        <option>Monaghan</option>
-                        <option>Offaly</option>
-                        <option>Roscommon</option>
-                        <option>Sligo</option>
-                        <option>Tipperary</option>
-                        <option>Waterford</option>
-                        <option>Westmeath</option>
-                        <option>Wesford</option>
-                        <option>Wicklow</option>
-                    </select>
+                <div class="form-group col-md-6">
+                    <label for="inputExtraInf">Extra Information</label>
+                    <input type="text" class="form-control" id="inputExtraInf"
+                        placeholder="Extra information, hotel, house, etc.">
                 </div>
-                <div class="form-group col-md-2">
-                    <label for="inputCode">Code</label>
-                    <input type="text" class="form-control" id="inputCode">
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="inputCity">City</label>
+                        <input type="text" class="form-control" id="inputCity" placeholder="City">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputState">State</label>
+                        <input type="text" class="form-control" id="inputCity" placeholder="State/Count">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputCountry">Country</label>
+                        <input type="text" class="form-control" id="inputCity" placeholder="Country">
+                    </div>
+
+                    <div class="form-group col-md-2">
+                        <label for="inputCode">Code</label>
+                        <input type="text" class="form-control" id="inputCode" placeholder="Code">
+                    </div>
                 </div>
             </div>
 
@@ -146,6 +123,8 @@
                     placeholder="Describe your experience here..." rows="3"></textarea>
             </div>
 
+
+
             <div class="mb-3">
                 <label for="exampleFormControlTechnicalSkills" class="form-label">Technical Skills</label>
                 <textarea class="form-control" id="exampleFormControlTechnicalSkills"
@@ -153,10 +132,16 @@
             </div>
 
             <div class="mb-3">
-                <label for="exampleFormControlTechnicalSkills" class="form-label">Interests / Achievements (Additional
+                <label for="exampleFormControlInterests" class="form-label">Interests / Achievements (Additional
                     Information)</label>
                 <textarea class="form-control" id="exampleFormControlInterestsAchievements"
                     placeholder="Describe your interests and achievements..." rows="3"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlTechnicalSkills" class="form-label">Purpose / Goals</label>
+                <textarea class="form-control" id="exampleFormControlInterestsAchievements"
+                    placeholder="Describe your purpose and goals?..." rows="3"></textarea>
             </div>
 
             <div class="form-group">
@@ -167,7 +152,7 @@
                     </label>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Entrar</button>
+            <button type="update" class="btn btn-primary">Update</button>
         </form>
 
 
@@ -177,49 +162,50 @@
 
     <div class="container">
         <H1>List</H1>
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option selected>Open this select menu</option>
+            <option value="1">FrontEnd</option>
+            <option value="2">BackEnd</option>
+        </select>
 
-        <div class="row">
-            <div class="col-4">
-                <div class="list-group" id="list-tab" role="tablist">
-                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
-                        href="#lista-home" role="tab" aria-controls="frontEnd">Front-End</a>
-                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list"
-                        href="#list-profile" role="tab" aria-controls="profile">Back-End</a>
-                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"
-                        href="#lista-mensagens" role="tab" aria-controls="messages">Mensagens</a>
-                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
-                        href="#lista-configuracoes" role="tab" aria-controls="settings">Configurações</a>
-                </div>
-            </div>
-            <div class="col-8">
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="list-home" role="tabpanel"
-                        aria-labelledby="list-home-list">
-
-
-                    </div>
-                    <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-                        .asdasd..
-                    </div>
-                    <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
-                        .ddddddddd..</div>
-                    <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
-                        ..dddwwwwwwww.</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action active">
-                Cras justo odio
-            </a>
-            <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-            <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-            <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-            <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
-        </div>
 
     </div>
+
+    <h2>WebSites to support during the your progress!</h2>
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+            FrontEnd
+        </a>
+        <a href="https://www.w3schools.com/html/default.asp"
+            class="list-group-item list-group-item-action">W3Schools</a>
+        <a href="http://cssgridgarden.com/" class="list-group-item list-group-item-action">CSS Grid Garden</a>
+        <a href="https://flexboxfroggy.com/" class="list-group-item list-group-item-action">Flex Box Froggy</a>
+        <a href="http://www.flexboxdefense.com/" class="list-group-item list-group-item-action">Flex Box Defense</a>
+        <a href="https://neumorphism.io/#e0e0e0" class="list-group-item list-group-item-action">Neumorphism</a>
+        <a href="https://100dayscss.com/" class="list-group-item list-group-item-action">100dayscss</a>
+        <a href="https://buildbootstrap.com/" class="list-group-item list-group-item-action">Buildbootstrap</a>
+        <a href="https://csslayout.io/" class="list-group-item list-group-item-action">CSS Layout</a>
+        <a href="https://cssreference.io/" class="list-group-item list-group-item-action">CSS Reference</a>
+    </div>
+    <br>
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+            BackEnd
+        </a>
+        <a href="https://www.youtube.com/watch?v=xk4_1vDrzzo" class="list-group-item list-group-item-action">Java Full
+            Course ☕ -Learn to code today-【𝙁𝙧𝙚𝙚】</a>
+        <a href="https://coderbyte.com/" class="list-group-item list-group-item-action">Coderbyte - Improve your coding
+            skills </a>
+        <a href="https://app.codesignal.com/login" class="list-group-item list-group-item-action">Coderbyte - Get your
+            Coding Report and Prepare for Interviews</a>
+        <a href="http://www.flexboxdefense.com/" class="list-group-item list-group-item-action">Flex Box Defense</a>
+        <a href="https://neumorphism.io/#e0e0e0" class="list-group-item list-group-item-action">Neumorphism</a>
+        <a href="https://100dayscss.com/" class="list-group-item list-group-item-action">100dayscss</a>
+        <a href="https://buildbootstrap.com/" class="list-group-item list-group-item-action">Buildbootstrap</a>
+        <a href="https://csslayout.io/" class="list-group-item list-group-item-action">CSS Layout</a>
+        <a href="https://cssreference.io/" class="list-group-item list-group-item-action">CSS Reference</a>
+    </div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
