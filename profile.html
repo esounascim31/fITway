@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 </head>
 
 <body>
-
 
     <header>
         <div class="navbar-menu">
@@ -29,23 +28,18 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Profile<span class="sr-only">(página atual)</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">adasd</a>
-                        </li>
-
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 References
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Book</a>
-                                <a class="dropdown-item" href="#">User</a>
+                                <a class="dropdown-item" href="./book.html">Book</a>
+                                <a class="dropdown-item" href="./user.html">User</a>
+                                <a class="dropdown-item" href="./frontend.html">FrontEnd</a>
+                                <a class="dropdown-item" href="./backend.html">BackEnd</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Contribute</a>
+                                <a class="dropdown-item" href="./contribute.html">Contribute</a>
                             </div>
                         </li>
                     </ul>
@@ -55,7 +49,6 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i
                                 class="bi bi-search"></i></button>
-
                     </form>
                 </div>
             </nav>
@@ -64,12 +57,10 @@
 
     <div class="container">
         <H1>Profile</H1>
-
-        <div class="rounded float-right">
-            <img src="..." alt="..." class="img-thumbnail">
-        </div>
-
-        <form>
+        <form class="ProfileForm" id="profile">
+            <div class="rounded float-right">
+                <img src="..." alt="..." class="img-thumbnail">
+            </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputName">First Name</label>
@@ -97,15 +88,15 @@
                         placeholder="Extra information, hotel, house, etc.">
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-md-2">
                         <label for="inputCity">City</label>
                         <input type="text" class="form-control" id="inputCity" placeholder="City">
                     </div>
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-md-2">
                         <label for="inputState">State</label>
                         <input type="text" class="form-control" id="inputCity" placeholder="State/Count">
                     </div>
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-md-2">
                         <label for="inputCountry">Country</label>
                         <input type="text" class="form-control" id="inputCity" placeholder="Country">
                     </div>
@@ -113,6 +104,21 @@
                     <div class="form-group col-md-2">
                         <label for="inputCode">Code</label>
                         <input type="text" class="form-control" id="inputCode" placeholder="Code">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputCode">Nationality</label>
+                        <input type="text" class="form-control" id="inputNationality" placeholder="Nationality">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Languages">Language</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>English</option>
+                            <option>Franch</option>
+                            <option>Italian</option>
+                            <option>Portuguese</option>
+                            <option>Spanish</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -122,9 +128,6 @@
                 <textarea class="form-control" id="exampleFormControlWorkExperience"
                     placeholder="Describe your experience here..." rows="3"></textarea>
             </div>
-
-
-
             <div class="mb-3">
                 <label for="exampleFormControlTechnicalSkills" class="form-label">Technical Skills</label>
                 <textarea class="form-control" id="exampleFormControlTechnicalSkills"
@@ -143,16 +146,14 @@
                 <textarea class="form-control" id="exampleFormControlInterestsAchievements"
                     placeholder="Describe your purpose and goals?..." rows="3"></textarea>
             </div>
-
-            <div class="form-group">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                        Clique em mim
-                    </label>
-                </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTechnicalSkills" class="form-label">Others</label>
+                <textarea class="form-control" id="exampleFormControlInterestsAchievements"
+                    placeholder="Describe here... what kind of thing do you like to share, or where you would like to be in 5 years, or dreams..."
+                    rows="3"></textarea>
             </div>
-            <button type="update" class="btn btn-primary">Update</button>
+
+            <button id="update" class="btn btn-primary">Update</button>
         </form>
 
 
@@ -160,51 +161,7 @@
 
     </div>
 
-    <div class="container">
-        <H1>List</H1>
-        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-            <option selected>Open this select menu</option>
-            <option value="1">FrontEnd</option>
-            <option value="2">BackEnd</option>
-        </select>
 
-
-    </div>
-
-    <h2>WebSites to support during the your progress!</h2>
-    <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-            FrontEnd
-        </a>
-        <a href="https://www.w3schools.com/html/default.asp"
-            class="list-group-item list-group-item-action">W3Schools</a>
-        <a href="http://cssgridgarden.com/" class="list-group-item list-group-item-action">CSS Grid Garden</a>
-        <a href="https://flexboxfroggy.com/" class="list-group-item list-group-item-action">Flex Box Froggy</a>
-        <a href="http://www.flexboxdefense.com/" class="list-group-item list-group-item-action">Flex Box Defense</a>
-        <a href="https://neumorphism.io/#e0e0e0" class="list-group-item list-group-item-action">Neumorphism</a>
-        <a href="https://100dayscss.com/" class="list-group-item list-group-item-action">100dayscss</a>
-        <a href="https://buildbootstrap.com/" class="list-group-item list-group-item-action">Buildbootstrap</a>
-        <a href="https://csslayout.io/" class="list-group-item list-group-item-action">CSS Layout</a>
-        <a href="https://cssreference.io/" class="list-group-item list-group-item-action">CSS Reference</a>
-    </div>
-    <br>
-    <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-            BackEnd
-        </a>
-        <a href="https://www.youtube.com/watch?v=xk4_1vDrzzo" class="list-group-item list-group-item-action">Java Full
-            Course ☕ -Learn to code today-【𝙁𝙧𝙚𝙚】</a>
-        <a href="https://coderbyte.com/" class="list-group-item list-group-item-action">Coderbyte - Improve your coding
-            skills </a>
-        <a href="https://app.codesignal.com/login" class="list-group-item list-group-item-action">Coderbyte - Get your
-            Coding Report and Prepare for Interviews</a>
-        <a href="http://www.flexboxdefense.com/" class="list-group-item list-group-item-action">Flex Box Defense</a>
-        <a href="https://neumorphism.io/#e0e0e0" class="list-group-item list-group-item-action">Neumorphism</a>
-        <a href="https://100dayscss.com/" class="list-group-item list-group-item-action">100dayscss</a>
-        <a href="https://buildbootstrap.com/" class="list-group-item list-group-item-action">Buildbootstrap</a>
-        <a href="https://csslayout.io/" class="list-group-item list-group-item-action">CSS Layout</a>
-        <a href="https://cssreference.io/" class="list-group-item list-group-item-action">CSS Reference</a>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
