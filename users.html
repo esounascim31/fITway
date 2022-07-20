@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
@@ -35,10 +35,11 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="./book.html">Book</a>
+                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="./users.html">User</a>
+                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="./frontend.html">FrontEnd</a>
-
-
+                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="./backend.html">BackEnd</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="./contribute.html">Contribute</a>
@@ -56,31 +57,23 @@
             </nav>
         </div>
     </header>
-    <div class="container">
 
-        <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                BackEnd
-            </a>
-            <a href="https://www.youtube.com/watch?v=xk4_1vDrzzo" class="list-group-item list-group-item-action">Java
-                Full
-                Course ☕ -Learn to code today-【𝙁𝙧𝙚𝙚】</a>
-            <a href="https://coderbyte.com/" class="list-group-item list-group-item-action">Coderbyte - Improve your
-                coding
-                skills </a>
-            <a href="https://app.codesignal.com/login" class="list-group-item list-group-item-action">Coderbyte - Get
-                your
-                Coding Report and Prepare for Interviews</a>
-            <a href="http://www.flexboxdefense.com/" class="list-group-item list-group-item-action">Flex Box Defense</a>
-            <a href="https://neumorphism.io/#e0e0e0" class="list-group-item list-group-item-action">Neumorphism</a>
-            <a href="https://100dayscss.com/" class="list-group-item list-group-item-action">100dayscss</a>
-            <a href="https://buildbootstrap.com/" class="list-group-item list-group-item-action">Buildbootstrap</a>
-            <a href="https://csslayout.io/" class="list-group-item list-group-item-action">CSS Layout</a>
-            <a href="https://cssreference.io/" class="list-group-item list-group-item-action">CSS Reference</a>
-        </div>
 
-    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyDPCvgsMKCDhKlBQEu32uR8sz3IDlMvZkA",
+            authDomain: "users-8a636.firebaseapp.com",
+            projectId: "users-8a636",
+            storageBucket: "users-8a636.appspot.com",
+            messagingSenderId: "704316555693",
+            appId: "1:704316555693:web:c67ab848aad98d492ea124",
+            measurementId: "G-7ZQKVVEKS8"
+        })
+    </script>
+    <script src="./app.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -92,3 +85,7 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 </body>
+
+
+
+</html>

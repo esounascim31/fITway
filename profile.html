@@ -13,6 +13,93 @@
 
 <body>
 
+
+    <script>
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+        import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyC9OcKUIVvUM_Ds6nmeXk7EiGvnueJYN3c",
+            authDomain: "authetication-app-c2b6e.firebaseapp.com",
+            databaseURL: "https://authetication-app-c2b6e-default-rtdb.firebaseio.com",
+            projectId: "authetication-app-c2b6e",
+            storageBucket: "authetication-app-c2b6e.appspot.com",
+            messagingSenderId: "1064601564886",
+            appId: "1:1064601564886:web:89864f16dee2785b2a3b77"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const auth = getAuth();
+
+        const firstName = document.getElementById("firstName");
+        const lastName = document.getElementById("lastName");
+        const email = document.getElementById("email");
+
+        const mobilePhone = document.getElementById("mobilePhone");
+        const address = document.getElementById("address");
+        const extraInformation = document.getElementById("extraInformation");
+        const city = document.getElementById("city");
+        const county = document.getElementById("county");
+        const country = document.getElementById("country");
+
+        const aercode = document.getElementById("aercode");
+        const nationality = document.getElementById("nationality");
+        const language = document.getElementById("language");
+        const workExperience = document.getElementById("workExperience");
+        const technicalSkill = document.getElementById("technicalSkill");
+        const interestAchievements = document.getElementById("interestAchievements");
+        const purposeGoals = document.getElementById("purposeGoals");
+        const others = document.getElementById("others");
+        const linkedin = document.getElementById("linkedin");
+        const github = document.getElementById("github");
+        const resume = document.getElementById("resume");
+
+
+        profile.addEventListener('onclick', (e) => {
+
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("email").value;
+            var mobilePhone = document.getElementById("mobilePhone").value;
+            var address = document.getElementById("address").value;
+            var extraInformation = document.getElementById("extraInformation").value;
+            var city = document.getElementById("city").value;
+            var county = document.getElementById("county").value;
+            var country = document.getElementById("country").value;
+            var aercode = document.getElementById("aercode").value;
+            var nationality = document.getElementById("nationality").value;
+            var language = document.getElementById("language").value;
+            var workExperience = document.getElementById("workExperience").value;
+            var technicalSkill = document.getElementById("technicalSkill").value;
+            var interestAchievements = document.getElementById("interestAchievements").value;
+            var purposeGoals = document.getElementById("purposeGoals").value;
+            var others = document.getElementById("others").value;
+            var linkedin = document.getElementById("linkedin").value;
+            var github = document.getElementById("github").value;
+            var resume = document.getElementById("resume").value;
+
+        });
+
+        const usersList = auth.currentUser;
+        onAuthStateChanged(auth, (usersList) => {
+            if (usersList) {
+
+                const uid = UsersList.uid;
+
+            } else {
+
+            }
+        });
+
+    </script>
+
     <header>
         <div class="navbar-menu">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -35,8 +122,11 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="./book.html">Book</a>
-                                <a class="dropdown-item" href="./user.html">User</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="./users.html">User</a>
+                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="./frontend.html">FrontEnd</a>
+                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="./backend.html">BackEnd</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="./contribute.html">Contribute</a>
@@ -59,60 +149,60 @@
         <H1>Profile</H1>
         <form class="ProfileForm" id="profile">
             <div class="rounded float-right">
-                <img src="..." alt="..." class="img-thumbnail">
+                <!-- <img src="..." alt="..." class="img-thumbnail"> -->
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputName">First Name</label>
-                    <input type="firstname" class="form-control" id="inputFirstName" placeholder="First Name">
+                    <input type="firstname" class="form-control" id="firstname" placeholder="First Name">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="lastName">Last Name</label>
-                    <input type="lastName" class="form-control" id="inputLastName" placeholder="Last Name">
+                    <input type="lastName" class="form-control" id="lastName" placeholder="Last Name">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputEmail">Email</label>
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                    <input type="email" class="form-control" id="email" placeholder="Email">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputNumber">Mobile Phone</label>
-                    <input type="phone" class="form-control" id="inputNumber" placeholder="Mobile Phone">
+                    <input type="phone" class="form-control" id="mobilePhone" placeholder="Mobile Phone">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputAddress">Address</label>
-                    <input type="address" class="form-control" id="inputAddress" placeholder="Address">
+                    <input type="address" class="form-control" id="address" placeholder="Address">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputExtraInf">Extra Information</label>
-                    <input type="text" class="form-control" id="inputExtraInf"
+                    <input type="text" class="form-control" id="extraInformation"
                         placeholder="Extra information, hotel, house, etc.">
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-2">
                         <label for="inputCity">City</label>
-                        <input type="text" class="form-control" id="inputCity" placeholder="City">
+                        <input type="text" class="form-control" id="city" placeholder="City">
                     </div>
                     <div class="form-group col-md-2">
                         <label for="inputState">State</label>
-                        <input type="text" class="form-control" id="inputCity" placeholder="State/Count">
+                        <input type="text" class="form-control" id="county" placeholder="State/Count">
                     </div>
                     <div class="form-group col-md-2">
                         <label for="inputCountry">Country</label>
-                        <input type="text" class="form-control" id="inputCity" placeholder="Country">
+                        <input type="text" class="form-control" id="country" placeholder="Country">
                     </div>
 
                     <div class="form-group col-md-2">
                         <label for="inputCode">Code</label>
-                        <input type="text" class="form-control" id="inputCode" placeholder="Code">
+                        <input type="text" class="form-control" id="aercode" placeholder="Code">
                     </div>
                     <div class="form-group col-md-2">
                         <label for="inputCode">Nationality</label>
-                        <input type="text" class="form-control" id="inputNationality" placeholder="Nationality">
+                        <input type="text" class="form-control" id="nationality" placeholder="Nationality">
                     </div>
 
                     <div class="form-group">
                         <label for="Languages">Language</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select class="form-control" id="language">
                             <option>English</option>
                             <option>Franch</option>
                             <option>Italian</option>
@@ -125,43 +215,77 @@
 
             <div class="mb-3">
                 <label for="exampleFormControlWorkExperience" class="form-label">Work Experience</label>
-                <textarea class="form-control" id="exampleFormControlWorkExperience"
-                    placeholder="Describe your experience here..." rows="3"></textarea>
+                <textarea class="form-control" id="workExperience" placeholder="Describe your experience here..."
+                    rows="3"></textarea>
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTechnicalSkills" class="form-label">Technical Skills</label>
-                <textarea class="form-control" id="exampleFormControlTechnicalSkills"
-                    placeholder="Describe your Technical Skill..." rows="3"></textarea>
+                <textarea class="form-control" id="technicalSkill" placeholder="Describe your Technical Skill..."
+                    rows="3"></textarea>
             </div>
 
             <div class="mb-3">
                 <label for="exampleFormControlInterests" class="form-label">Interests / Achievements (Additional
                     Information)</label>
-                <textarea class="form-control" id="exampleFormControlInterestsAchievements"
+                <textarea class="form-control" id="interestAchievements"
                     placeholder="Describe your interests and achievements..." rows="3"></textarea>
             </div>
 
             <div class="mb-3">
                 <label for="exampleFormControlTechnicalSkills" class="form-label">Purpose / Goals</label>
-                <textarea class="form-control" id="exampleFormControlInterestsAchievements"
-                    placeholder="Describe your purpose and goals?..." rows="3"></textarea>
+                <textarea class="form-control" id="purposeGoals" placeholder="Describe your purpose and goals?..."
+                    rows="3"></textarea>
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTechnicalSkills" class="form-label">Others</label>
-                <textarea class="form-control" id="exampleFormControlInterestsAchievements"
+                <textarea class="form-control" id="others"
                     placeholder="Describe here... what kind of thing do you like to share, or where you would like to be in 5 years, or dreams..."
                     rows="3"></textarea>
             </div>
 
-            <button id="update" class="btn btn-primary">Update</button>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon3">Linkedin</span>
+                </div>
+                <input type="text" class="form-control" id="linkedin" aria-describedby="basic-addon3">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon3">GitHub</span>
+
+                </div>
+                <input type="text" class="form-control" id="github" aria-describedby="basic-addon3">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="reume">Upload CV</span>
+                </div>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="resume" aria-describedby="inputGroupFileAddon01">
+                    <label class="custom-file-label" for="inputGroupFile01">...</label>
+                </div>
+            </div>
+            <button id="update" class="btn btn-primary" onclick="update">Update</button>
         </form>
-
-
-
 
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyDPCvgsMKCDhKlBQEu32uR8sz3IDlMvZkA",
+            authDomain: "users-8a636.firebaseapp.com",
+            projectId: "users-8a636",
+            storageBucket: "users-8a636.appspot.com",
+            messagingSenderId: "704316555693",
+            appId: "1:704316555693:web:c67ab848aad98d492ea124",
+            measurementId: "G-7ZQKVVEKS8"
+        })
+    </script>
+    <script src="./app.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
