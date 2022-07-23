@@ -1,7 +1,7 @@
  // Import the functions you need from the SDKs you need
  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
  import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js";
- import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
+ import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
  // TODO: Add SDKs for Firebase products that you want to use
  // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -22,78 +22,82 @@
 
  const sighUp = document.getElementById("sighUp");
 
- sighUp.addEventListener("click", function (){
+sighUp.addEventListener("click",(e) => {
+    e.preventDefault();
+    console.log("sighUp");
+    console.log(auth);
 
-firebase.auth().sighUpWithEmailAndPassword(firstName.value, lastName.value, email.value, password.value,confirmPassword.value).then(function (result) {
-    alert("successful");
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const email = document.getElementById('email').value;
+    const mobilePhone = document.getElementById("mobilePhone").value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
 
- }).catch(function (error) {
-    var errorCode = error.code;
-    var errorMessage = error.message;
+    createUserWithEmailAndPassword(auth, email, password)
+        .then(userCredential => {
+        // Signed in
+        const user = userCredential.user;
+        window.location.href = "../html/profile.html";
+        alert("user created!");
+})
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
 
-    alert(errorMessage);
-    console.log("Failure!")
- });
+        console.log(errorMessage);
+        // ..
+    });
 
 });
+
+
+//     firebase.auth().createUserWithEmailAndPassword(firstName, lastName, email,mobilePhone, password, confirmPassword).then(function (result) {
+//     alert("successful");
+
+//  }).catch(function (error) {
+//     var errorCode = error.code;
+//     var errorMessage = error.message;
+
+//     alert(errorMessage);
+//     console.log("Failure!")
+//  });
+// });
+
+
+// set(ref(database, 'user/' + user.uid), {
     
+//     firstName: firstName,
+//     lastName: lastName,
+//     email: email,
+//     mobilePhone: mobilePhone,
+//     password: password,
+//     confirmPassword: confirmPassword,
+// })
 
 
- sighUp.addEventListener('click', (e) => {
+// //     //var username = document.getElementById('username').value;
+//     console.log(firstName);
+//     console.log(lastName);
+//     console.log(email);
+//     console.log(mobilePhone);
+//     console.log(password);
+//     console.log(confirmPassword);
 
-    var firstName = document.getElementById("firstName").value;
-    var lastName = document.getElementById("lastName").value;
-    var email = document.getElementById('email').value;
-    var mobilePhone = document.getElementById("mobilePhone").value;
-    var password = document.getElementById('password').value;
-    var confirmPassword = document.getElementById("confirmPassword").value;
-
-    //var username = document.getElementById('username').value;
-    console.log(firstName);
-    console.log(lastName);
-    console.log(email);
-    console.log(mobilePhone);
-    console.log(password);
-    console.log(confirmPassword);
-
-     createUserWithEmailAndPassword(auth, firstName, lastName, email, mobilePhone, password, confirmPassword)
-         .then((userCredential) => {
-             // Signed in
-             const user = userCredential.user;
-
-             set(ref(database, 'user/' + user.uid), {
-                 //username: username,
-                 firstName: firstName,
-                 lastName: lastName,
-                 email: email,
-                 mobilePhone: mobilePhone,
-                 password: password,
-                 confirmPassword: confirmPassword,
-             })
-
-             alert("user created!");
-             // ...
-         })
-         .catch((error) => {
-             const errorCode = error.code;
-             const errorMessage = error.message;
-
-             alert(errorMessage);
-             // ..
-         });
- });
- const users = auth.currentUser;
- onAuthStateChanged(auth, (user) => {
-     if (user) {
+     
+//  });
+//  const users = auth.currentUser;
+//  onAuthStateChanged(auth, (user) => {
+//      if (user) {
 
 
-         // User is signed in, see docs for a list of available properties
-         // https://firebase.google.com/docs/reference/js/firebase.User
-         const uid = user.uid;
+//          // User is signed in, see docs for a list of available properties
+//          // https://firebase.google.com/docs/reference/js/firebase.User
+//          const uid = user.uid;
 
-         // ...
-     } else {
-         // User is signed out
-         // ...
-     }
- });
+//          // ...
+//      } else {
+//          // User is signed out
+//          // ...
+//      }
+//  });

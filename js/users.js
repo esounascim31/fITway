@@ -1,3 +1,55 @@
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDPCvgsMKCDhKlBQEu32uR8sz3IDlMvZkA",
+    authDomain: "users-8a636.firebaseapp.com",
+    projectId: "users-8a636",
+    storageBucket: "users-8a636.appspot.com",
+    messagingSenderId: "704316555693",
+    appId: "1:704316555693:web:c67ab848aad98d492ea124",
+    measurementId: "G-7ZQKVVEKS8"
+  };
+
+const users = document.querySelector('[data-js="users-list"]')
+const app = initializeApp(firebaseConfig)
+const db = getFirestore(app)
+
+async function getUsers(db) {
+    const usersCol = collection(db, 'users');
+    const usersSnapshot = await getDocs(usersCol);
+    const usersList = usersSnapshot.docs.map(doc => doc.data());
+    return usersList;
+}
+console.log(getUsers(users));
+
+// database.collection('users').get()
+//     .then(snapshot => {
+//         const usersLis = snapshot.docs.reduce((acc, doc) => {
+//             const { firstName, lastName, email } = doc.data()
+
+//             acc += `<li class="my-4">
+//             <h5>${firstName}</h5>
+
+//             <ul>
+//                 <li>Name ${lastName}</li>
+//                 <li>Surname ${email}</li>
+//             </ul>
+//         </li>`
+
+//             return acc
+//         }, '')
+
+//             usersList.innerHTML = usersLis
+//         })
+//         .catch(err => {
+//             console.log(err.message)
+//         })
+
+
+
+/*
+
 firebase.initializeApp({
     apiKey: "AIzaSyDPCvgsMKCDhKlBQEu32uR8sz3IDlMvZkA",
     authDomain: "users-8a636.firebaseapp.com",
@@ -73,3 +125,5 @@ onAuthStateChanged(auth, (usersList) => {
 
     }
 });
+
+*/

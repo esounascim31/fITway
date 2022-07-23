@@ -1,0 +1,23 @@
+{
+  "name": "fitway",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "firebase": "^9.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://esounascim31@github.com/esounascim31/fITway.git"
+  },
+  "author": "Edson Nascimento",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esounascim31/fITway/issues"
+  },
+  "homepage": "https://github.com/esounascim31/fITway#readme"
+}

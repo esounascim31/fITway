@@ -1,4 +1,4 @@
-   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
     import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js";
     import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
     // TODO: Add SDKs for Firebase products that you want to use
@@ -25,8 +25,8 @@
 
     btnLogin.addEventListener('click', (e) => {
 
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
 
 
         signInWithEmailAndPassword(auth, email, password)
@@ -38,7 +38,7 @@
                 update(ref(database, 'users/' + user.uid), {
                     last_login: dt,
                 })
-                window.location.href = "./profile.html";
+                window.location.href = "../html/profile.html";
                 alert('User loged in!');
                 // ...
             })
