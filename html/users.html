@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Users</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <script type="module" src="../js/users.js"></script>
+    <script src="../js/firestore-db.js">
+    </script>
 </head>
 
 <body>
@@ -26,7 +28,11 @@
                 <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="./profile.html">Profile<span class="sr-only">(página
+                            <a class="nav-link" href="../html/profile.html">Profile<span class="sr-only">(página
+                                    atual)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../html/resume.html">Resume<span class="sr-only">(página
                                     atual)</span></a>
                         </li>
                         <li class="nav-item dropdown">
@@ -35,15 +41,15 @@
                                 References
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="./book.html">Book</a>
+                                <a class="dropdown-item" href="../html/book.html">Book</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="./users.html">User</a>
+                                <a class="dropdown-item" href="../html/users.html">User</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="./frontend.html">FrontEnd</a>
+                                <a class="dropdown-item" href="../html/frontend.html">FrontEnd</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="./backend.html">BackEnd</a>
+                                <a class="dropdown-item" href="../html/backend.html">BackEnd</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="./contribute.html">Contribute</a>
+                                <a class="dropdown-item" href="../html/contribute.html">Contribute</a>
                             </div>
                         </li>
                     </ul>
@@ -60,6 +66,31 @@
     </header>
 
     <ul data-js="users-list"></ul>
+
+    <div class="center">
+        <h1>your account details</h1>
+        <!-- photo -->
+        <img id="proimg" class="circle" src="./assets/noimage.png" alt="noimage" style="width: 50%;height: auto;" />
+        <!-- photo -->
+        <div class="userDetails"></div>
+    </div>
+
+    <table id="table" style="display: none;">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>speciality</th>
+                <th>ex</th>
+                <th>portfolio</th>
+            </tr>
+        </thead>
+
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
 
     <!--
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>

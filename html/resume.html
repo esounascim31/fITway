@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <script type="module" src="../js/profile.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class=" navbar-menu">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">fITway(LOGO)</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false"
+                    aria-label="Alterna navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../html/profile.html">Profile<span class="sr-only">(página
+                                    atual)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Resume<span class="sr-only">(página atual)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                References
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="../html/book.html">Book</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="../html/users.html">User</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="../html/frontend.html">FrontEnd</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="../html/backend.html">BackEnd</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="../html/contribute.html">Contribute</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar"
+                            aria-label="Pesquisar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i
+                                class="bi bi-search"></i></button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- <div class="jumbotron">
+        <h1 class="display-4">HOW TO WRITE A CV</h1>
+        <p class="lead">xxx.</p>
+        <hr class="my-4">
+        <p>Ele usa classes utilitárias para tipografia e espaçamento de conteúdo, dentro do maior container.</p>
+        <p>Ele usa classes utilitárias para tipografia e espaçamento de conteúdo, dentro do maior container.</p>
+        <p>Ele usa classes utilitárias para tipografia e espaçamento de conteúdo, dentro do maior container.</p>
+        <p>Ele usa classes utilitárias para tipografia e espaçamento de conteúdo, dentro do maior container.</p>
+        <p>Ele usa classes utilitárias para tipografia e espaçamento de conteúdo, dentro do maior container.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Leia mais</a>
+    </div> -->
+
+    <div class="row">
+        <div class="col-2">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+                    aria-controls="v-pills-home" aria-selected="true">Personal Profile</a>
+                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+                    aria-controls="v-pills-profile" aria-selected="false">Key Skills</a>
+                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+                    aria-controls="v-pills-messages" aria-selected="false">Education</a>
+                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+                    aria-controls="v-pills-settings" aria-selected="false">Hobbies & Interests</a>
+                <a class="nav-link" id="v-pills-reference-tab" data-toggle="pill" href="#v-pills-reference" role="tab"
+                    aria-controls="v-pills-reference" aria-selected="false">References</a>
+                <a class="nav-link" id="v-pills-contact-tab" data-toggle="pill" href="#v-pills-contact" role="tab"
+                    aria-controls="v-pills-contact" aria-selected="false">Contact Information</a>
+                <a class="nav-link" id="v-pills-contact-tab" data-toggle="pill" href="#v-pills-cv" role="tab"
+                    aria-controls="v-pills-cv" aria-selected="false">Additional Information</a>
+            </div>
+        </div>
+        <div class="col-7">
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                    aria-labelledby="v-pills-home-tab">
+
+                    <h1>Personal Profile</h1>
+
+                    <p>This should be written just below your contact information and is a great way to pique the
+                        interest of the recruiter. It should be a short (3-5 sentences) summary of why you want the job
+                        and provide an overview of your skills and experience and how they make you a good fit.
+                        Basically, your personal profile is your sales pitch. Get it right and the recruiter will keep
+                        reading.</p>
+
+                    <p>Avoid vague descriptions and ‘buzz’ words such as ‘dynamic’ and ‘self-starter’. Instead, open
+                        with a specific statement outlining your experience and specialisations.</p>
+
+                    .
+                </div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    Key Skills
+
+                    <div class="jumbotron">
+                        <h1 class="display-4">Key Skills</h1>
+                        <p class="lead">xxx.</p>
+                        <hr class="my-4">
+                        <p>This is arguably the most important section on your CV. Simply put; recruiters are keen to
+                            know what you offer the company. As a result, it is necessary to showcase your skills and
+                            outline how you will have a positive influence on the organisation going forward.</p>
+                        <p>In the world of recruitment, three types of skills stand out:</p>
+                        <p>Adaptive: Skills proven by personality traits rather than experience which makes them
+                            difficult to quantify.</p>
+                        <p>Transferable: Skills you learn in one field that are relevant to another industry.</p>
+                        <p>Job-Related: Skills which are useful in a specific field.</p>
+                        <p>When writing your CV, try to focus on job-related and transferable skills such as:</p>
+
+                        <p>Teamwork</p>
+                        <p>Communication</p>
+                        <p>Problem Solving</p>
+                        <p>Flexibility</p>
+                        <p>Technical Skills</p>
+                        <p>Initiative</p>
+                        <p>Interpersonal</p>
+
+                        <p>If you have knowledge of a programming language or computer systems relevant to the job, make
+                            sure you include it.</p>
+                    </div>
+
+
+                </div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                    <p>As space is at a premium when writing a CV, always think carefully about the educational details
+                        you wish to include. For example, do you need to mention the 6 honours you earned in your
+                        Leaving Cert when you also have a Bachelor’s Degree in Accounting? As is the case with
+                        employment history, ensure your most recent qualifications are first on the page.</p>
+                    <p>This is also the section where you can include information on whether you speak another foreign
+                        language (if relevant) or if you have professional qualifications such as a chartership. </p>
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+
+                    Hobbies & Interests
+                    <p>Some employers like to see evidence that candidates have a social life outside of work but in
+                        many cases, there is no real reason to go into much detail here. As is the case throughout your
+                        CV, only include information pertinent to the application. While trainspotting and birdwatching
+                        probably won’t help you get the job, voluntary experience and charity work may be useful
+                        additions.
+                    </p>
+                </div>
+                <div class="tab-pane fade" id="v-pills-reference" role="tabpanel"
+                    aria-labelledby="v-pills-reference-tab">
+
+                    <p>References</p>
+                    <p>Add a line saying ‘references available upon request’. There is no need to include them in your
+                        CV. If the company specifically asks for references, include them on a separate sheet.
+                    </p>
+                </div>
+
+                <div class="tab-pane fade" id="v-pills-contact" role="tabpanel" aria-labelledby="v-pills-contact-tab">
+
+                    <p>Contact Information</p>
+                    <p>Name Address:Self-explanatory.</p>
+                    <p>Phone Numbers: Include your mobile number and consider adding a personal voicemail in case you
+                        miss a recruiter’s call. You can include a home phone number but only if you live with people
+                        that can be trusted to answer in a polite manner and take messages; this means no hung-over
+                        flatmates!</p>
+                    <p>Email Address: Use a professional sounding one; the best option is your name or a variation of
+                        it.</p>
+                    <p>Social Media: You can include details of social media accounts but ONLY if they are professional
+                        in terms of content. It should be noted that an increasing number of companies DO look at social
+                        media accounts of prospective employees deemed to be in with a chance of at least getting an
+                        interview. If you have any compromising photos or information you would rather a recruiter
+                        didn’t know about, get rid of them before embarking on a job search. While it’s true that once
+                        something appears online, it is never truly gone, most companies won’t go to the trouble it
+                        takes to dig up dirt; at least not prior to the interview stage!</p>
+
+                    <p>Information you should NOT include:</p>
+                    <p>Marital Status: Irrelevant.</p>
+                    <p>Nationality: Not important unless you are applying from outside the EU.</p>
+                    <p>Date of Birth: You don’t need to include this. Companies can’t legally discriminate due to your
+                        age.</p>
+                    <p>Photo: Although common in some countries, it is not common practice here in Ireland.</p>
+                </div>
+
+                <div class="tab-pane fade" id="v-pills-cv" role="tabpanel" aria-labelledby="v-pills-cv-tab">
+
+                    <div class="jumbotron">
+                        <h1 class="display-4">Quick Tips On How To Write A CV</h1>
+                        <hr class="my-4">
+
+                        <h1>Structure Your Search </h1>
+                        <p>Use Excel to create a spreadsheet and begin your job search by targeting the industries you
+                            wish to work in. The next step is to focus on individual industries and look for employers.
+                            Then you can use job sites such as www.jobs.ie to create a list of companies you’re
+                            interested in working for and find out the people you need to contact.</p>
+                        <p>Now you can tailor your CV and cover letter and send it in to the selected individuals. While
+                            this is a time consuming process, it will yield far greater rewards than a spray and pray
+                            approach.
+                        </p>
+                        <h1>Add the Cover Letter in the Email’s Body</h1>
+                        <p>As most CVs are sent via email these days and the body of the email provides recruiters with
+                            their first impression of you; why not take the bull by the horns and give them your cover
+                            letter as well? This should unquestionably help you find favour with the hiring manager;
+                            especially when they are used to receiving bland emails with CVs attached.</p>
+                        <h1>Look For Work Experience</h1>
+                        <p>This is particularly relevant if you are a graduate with little in the way of real-world
+                            experience. As there are so many candidates for every position, employers are getting
+                            fussier which means your Master’s Degree may not be enough if there is no work experience to
+                            back it up.</p>
+                        <p>Check out the website of the nearest volunteer centre to you and see if there is anything
+                            available in your field. Any type of experience in a relevant field you can add to your CV
+                            is gold dust in this ultra competitive job market.</p>
+
+                        <h1 class="display-4">Final Thoughts On How To Write A CV</h1>
+
+                        <p>In the main, the layout mentioned above is the best way to present your CV. However, you may
+                            wish to place your educational qualifications ahead of your work experience if the latter is
+                            not as strong as the former.</p>
+                        <p>As your CV (and accompanying cover letter) is the only way in which a prospective employer
+                            can determine your suitability for a role, it needs to be as compelling and convincing as a
+                            sales pitch. Keep it concise, informative, relevant and above all, positive. Additionally,
+                            make sure it is properly formatted with no spelling/grammatical errors with lots of white
+                            space and headlines. If you write a high quality CV, you have an excellent chance of beating
+                            the odds and getting invited to an interview.</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+
+
+</html>

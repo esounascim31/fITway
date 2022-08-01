@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Login</title>
+
+    <!-- css reference folder -->
     <link rel="stylesheet" href="../external.css">
+
+    <!-- google fonts -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="module" src="../js/login.js"></script>
 
 </head>
 
 <body>
-    <!-- <header>Acelere a etapa da sua carreira em programação</header> -->
 
     <div class="login-box">
 
@@ -30,7 +32,7 @@
                 <button class="btn btn-primary btn-user btn-block" id="btnLogin"> Login </button>
             </div>
 
-            <span class="loginwith">Sign in with Social network</span><br>
+            <span class="loginwith">Sign in with Social Network</span><br>
 
             <button class="social-signin facebook">FaceBook</button>
             <button class="social-signin github">GitHub</button>
@@ -39,12 +41,38 @@
             <p>OR</p>
 
             <button class="register"><a href="../registration.html">Register Here</a></button>
+
         </div>
     </div>
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js"></script>
+
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/firestore-db.js"></script>
+    <script type="module" src="../js/profile.js"></script>
+    <script type="module" src="../js/login.js"></script>
+
+    <script type="module">
+        // Your web app's Firebase configuration
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyC9OcKUIVvUM_Ds6nmeXk7EiGvnueJYN3c",
+            authDomain: "authetication-app-c2b6e.firebaseapp.com",
+            databaseURL: "https://authetication-app-c2b6e-default-rtdb.firebaseio.com",
+            projectId: "authetication-app-c2b6e",
+            storageBucket: "authetication-app-c2b6e.appspot.com",
+            messagingSenderId: "1064601564886",
+            appId: "1:1064601564886:web:89864f16dee2785b2a3b77",
+        };
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+      // firebase.initializeApp(firebaseConfig);
+    </script>
 
 
 </body>
-
 
 </html>
