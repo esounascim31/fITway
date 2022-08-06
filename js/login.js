@@ -39,7 +39,7 @@ btnLogin.addEventListener("click", (e) => {
                 token: user.uid,
                 email: email,                     
                 password: password,
-                confirmPassword: password               
+                confirmPassword: password
         });
 
         /* update(ref(database, "users/" + user.uid), {
@@ -47,6 +47,8 @@ btnLogin.addEventListener("click", (e) => {
         }); */
 
         // document.cookie["uid"] = user.uid;
+
+        localStorage.setItem('uid', user.uid);
         window.location.href = `../html/profile.html?uid=${user.uid}`; 
         alert(`User loged in!`);
         // ...

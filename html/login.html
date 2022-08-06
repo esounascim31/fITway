@@ -44,7 +44,7 @@
 
         </div>
     </div>
-
+    <!-- ------------------------Imports and configuration---------------------------------------------- -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script type="module" src="https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore.js"></script>
@@ -69,8 +69,13 @@
         };
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
-      // firebase.initializeApp(firebaseConfig);
+        // firebase.initializeApp(firebaseConfig);
+
+        import { getFirestore, doc, getDocs, setDoc, collection, addDoc, updateDoc, deleteDoc, deleteField, getDatabase, ref, set, child, update, remove } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore.js";
+
     </script>
+
+
 
 
 </body>

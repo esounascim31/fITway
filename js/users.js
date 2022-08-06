@@ -1,45 +1,45 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
-//import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+// import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+// //import { initializeApp } from "firebase/app";
+// import { getFirestore } from "firebase/firestore";
 
-const firebaseConfig = {
-    apiKey: "AIzaSyC9OcKUIVvUM_Ds6nmeXk7EiGvnueJYN3c",
-    authDomain: "authetication-app-c2b6e.firebaseapp.com",
-    databaseURL: "https://authetication-app-c2b6e-default-rtdb.firebaseio.com",
-    projectId: "authetication-app-c2b6e",
-    storageBucket: "authetication-app-c2b6e.appspot.com",
-    messagingSenderId: "1064601564886",
-    appId: "1:1064601564886:web:89864f16dee2785b2a3b77",
-  };
+// const firebaseConfig = {
+//     apiKey: "AIzaSyC9OcKUIVvUM_Ds6nmeXk7EiGvnueJYN3c",
+//     authDomain: "authetication-app-c2b6e.firebaseapp.com",
+//     databaseURL: "https://authetication-app-c2b6e-default-rtdb.firebaseio.com",
+//     projectId: "authetication-app-c2b6e",
+//     storageBucket: "authetication-app-c2b6e.appspot.com",
+//     messagingSenderId: "1064601564886",
+//     appId: "1:1064601564886:web:89864f16dee2785b2a3b77",
+//   };
 
-const users = document.querySelector("user")
-const updateProfile = document.querySelector("#profile")
-const db = firebase.firestore()
+// const users = document.querySelector("user")
+// const updateProfile = document.querySelector("#profile")
+// const db = firebase.firestore()
 
-const app = initializeApp(firebaseConfig);
+// const app = initializeApp(firebaseConfig);
 
-db.collection('user').get()
-.then(snapshot => {
-    const userLis = snapshot.docs.reduce((acc, doc) => {
-    const { firstName, lastName } = doc.data()
+// db.collection('user').get()
+// .then(snapshot => {
+//     const userLis = snapshot.docs.reduce((acc, doc) => {
+//     const { firstName, lastName } = doc.data()
 
-    acc += `<li class="my-4"> 
+//     acc += `<li class="my-4"> 
     
-    <ul>
-    <li>Name ${firstName}</li>
-    <li>Last name ${lastName}</li>
-    <li>Email ${email}</li>
-    <li>Added on ${createdAt.toDate()}</li>
-    </ul>
-    </li>`
+//     <ul>
+//     <li>Name ${firstName}</li>
+//     <li>Last name ${lastName}</li>
+//     <li>Email ${email}</li>
+//     <li>Added on ${createdAt.toDate()}</li>
+//     </ul>
+//     </li>`
     
-    return
-    }, '')
-    userList.innerHTML = userLis
-})
-.catch(err => {
-    console.log(err.message)
-})
+//     return
+//     }, '')
+//     userList.innerHTML = userLis
+// })
+// .catch(err => {
+//     console.log(err.message)
+// })
 
 
 // import { getAuth } from "firebase/auth";
