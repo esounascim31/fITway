@@ -27,13 +27,13 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const updateProfile = document.querySelector("#profile");
 const colRef = collection(db, "user");
+// const auth = getAuth();
 
 // const updateProfile = document.querySelector("#profile")
 const userDetails = document.querySelector(".userDetails");
 // // const auth = getAuth('user');
 
 // const user = auth.currentUser;
-
 const UID = localStorage.getItem("uid");
 
 getDoc(doc(db, "user", UID)).then((d) => {
@@ -108,6 +108,14 @@ function updateUserProfile(e) {
 
   M.Modal.getInstance(myModel[2]).close();
 }
+
+// signOut(auth)
+//   .then(() => {
+//     // Sign-out successful.
+//   })
+//   .catch((error) => {
+//     // An error happened.
+//   });
 
 // function db(user){
 //   firebase.firestore().collection('users')

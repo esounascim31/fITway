@@ -2,7 +2,6 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut,} from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
 import { getDatabase, set, ref, update, push, }  from "https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js";
 
-
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -21,7 +20,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const auth = getAuth();
-
 
 const btnLogin = document.getElementById("btnLogin");
 

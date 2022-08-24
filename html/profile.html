@@ -17,13 +17,14 @@
 </head>
 
 <body>
-    <header>
+
+    <header class="navbar navbar-expand navbar-dark  flex-column flex-md-row bd-navbar">
+
         <div class="navbar-menu">
 
             <nav class="navbar navbar-expand-lg bg-transparent text-dark">
 
                 <img src="../image/newLogo2022.png" width="5%" height="10%" alt="">
-                <!-- <a class="navbar-brand" href="#">fITway(LOGO)</a> -->
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false"
@@ -52,11 +53,7 @@
                             </a>
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="../html/book.html">Book</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="../html/frontend.html">FrontEnd</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="../html/backend.html">BackEnd</a>
+                                <a class="dropdown-item" href="../html/reference_list.html">Reference List</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="../html/contribute.html">Contribute</a>
                             </div>
@@ -71,6 +68,8 @@
                                 <i class="fa-solid fa-magnifying-glass"></i>
                                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i
                                         class="bi bi-search"></i></button>
+
+
                             </form>
                         </div>
                     </ul>
@@ -104,7 +103,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">
+                        <a class="nav-link active" href="../html/discussions.html">
                             <span class="icon icon-chat"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-wechat" viewBox="0 0 16 16">
                                     <path
@@ -115,6 +114,19 @@
                             Discussions
                         </a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                id="signOut" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+                                <path fill-rule="evenodd"
+                                    d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                            </svg>
+                        </a>
+                    </li>
+
                 </ul>
             </nav>
         </div>
@@ -277,35 +289,6 @@
     </div>
     <script type="module" src="../js/profile.js"></script>
     <!-- end = container profile -->
-
-    <!-- The core Firebase JS SDK is always required and must be listed first
-    <script type="module" src="https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js"></script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore.js"></script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js"></script>
-
-    <script type="module" src="../js/auth.js"></script>
-    <script type="module" src="../js/firestore-db.js"></script>
-    <script type="module" src="../js/profile.js"></script>
-
-    <script type="module">
-        // Your web app's Firebase configuration
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
-        const firebaseConfig = {
-            apiKey: "AIzaSyC9OcKUIVvUM_Ds6nmeXk7EiGvnueJYN3c",
-            authDomain: "authetication-app-c2b6e.firebaseapp.com",
-            databaseURL: "https://authetication-app-c2b6e-default-rtdb.firebaseio.com",
-            projectId: "authetication-app-c2b6e",
-            storageBucket: "authetication-app-c2b6e.appspot.com",
-            messagingSenderId: "1064601564886",
-            appId: "1:1064601564886:web:89864f16dee2785b2a3b77",
-        };
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        // firebase.initializeApp(firebaseConfig);
-    </script> -->
-
-
-
 
     <!-- Include via CDN   -->
     <!-- jQuery -->

@@ -16,14 +16,14 @@ body {
     align-items: center;
 }
 
-.container {
+#container {
     width: 80%;
     height: 80vh;
     display: flex;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212); 
 }
 
-.login-box {
+.login-box { 
     width: 80%;
     height: 80vh;
     display: flex;
@@ -74,7 +74,7 @@ body {
     border-radius: 4px;
     border: none;
     background-color: #089aa8;
-    color: rgb(40, 5, 5);
+    color: rgb(40, 5, 5); 
     transition: filter 0.2s;
 }
 
@@ -161,6 +161,14 @@ body {
     padding: 1rem 0;
 }
 
+.input-login {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+
 .input-box { 
     display: flex;
     flex-direction: column;
@@ -246,3 +254,4 @@ body {
         padding-right: 5rem;
 }
 }
+
