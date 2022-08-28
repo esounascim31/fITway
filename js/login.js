@@ -1,6 +1,18 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut,} from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
-import { getDatabase, set, ref, update, push, }  from "https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
+} from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
+import {
+  getDatabase,
+  set,
+  ref,
+  update,
+  push,
+} from "https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -33,11 +45,11 @@ btnLogin.addEventListener("click", (e) => {
         // Signed in
         const user = userCredential.user;
         const dt = new Date();
-        push(ref(database, "users"), {       
-                token: user.uid,
-                email: email,                     
-                password: password,
-                confirmPassword: password
+        push(ref(database, "users"), {
+          token: user.uid,
+          email: email,
+          password: password,
+          confirmPassword: password,
         });
 
         /* update(ref(database, "users/" + user.uid), {
@@ -46,8 +58,8 @@ btnLogin.addEventListener("click", (e) => {
 
         // document.cookie["uid"] = user.uid;
 
-        localStorage.setItem('uid', user.uid);
-        window.location.href = `../html/profile.html?uid=${user.uid}`; 
+        localStorage.setItem("uid", user.uid);
+        window.location.href = `../html/profile.html?uid=${user.uid}`;
         alert(`User loged in!`);
         // ...
       } catch (error) {
@@ -61,6 +73,3 @@ btnLogin.addEventListener("click", (e) => {
       alert(errorMessage);
     });
 });
-
-
-

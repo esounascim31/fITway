@@ -160,6 +160,11 @@ body {
     justify-content: space-between;
     padding: 1rem 0;
 }
+.register{
+    text-decoration: none;
+    border : 1px solid #6c63ff
+    color:#6c63ff
+}
 
 .input-login {
     display: flex;
