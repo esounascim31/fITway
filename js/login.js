@@ -35,6 +35,12 @@ const auth = getAuth();
 
 const btnLogin = document.getElementById("btnLogin");
 
+// The btnLogin (button) when clicked is creating a Login function when clicked.
+
+// The signInWithEmailandPassword will check the password and the user in the
+// firebase database, if the user is not registered it will show an error, otherwise it will
+// allow the user to login to the platform.
+
 btnLogin.addEventListener("click", (e) => {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;

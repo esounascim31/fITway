@@ -40,6 +40,8 @@ getDoc(doc(db, "user", UID)).then((d) => {
   }
 });
 
+// updateProfile – is the function that was created to add or edit the variables that were created. 
+
 updateProfile.addEventListener("submit", (e) => {
   e.preventDefault();
 

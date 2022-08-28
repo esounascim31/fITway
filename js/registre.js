@@ -29,6 +29,8 @@ const database = getDatabase(app);
 const auth = getAuth(app);
 const sighUp = document.getElementById("sighUp");
 
+// SighUp – It is the function of registering new users in the database.
+
 sighUp.addEventListener("click", (e) => {
   e.preventDefault();
   console.log("sighUp");
